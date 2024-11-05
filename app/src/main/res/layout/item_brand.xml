@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_50sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_50sdp"
+    android:padding="@dimen/_1sdp"
+    android:layout_margin="@dimen/_10sdp"
+    android:layout_height="@dimen/_50sdp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/brandImage"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher_background"/>
+
+</androidx.cardview.widget.CardView>

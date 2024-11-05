@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Assignment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dummy_hashtag">#MakeUp</string>
+    <string name="see_all">See All</string>
+    <string name="all_order_item_listing_hashtag">All Order Item Listing Hashtag</string>
+    <string name="dummy_name">Resh Vlogs</string>
+    <string name="dummy_days">20 days ago</string>
+    <string name ="image_loader">https://image.mux.com/%1$s/thumbnail.png</string>
+    <string name="days">%1$s days ago</string>
+    <string name="hashtag_text">#%1$s</string>
+    <string name="check_your_internet_connection">Check your internet Connection!!</string>
+    <string name="retry">retry</string>
+    <string name="brands">Brands</string>
+</resources>

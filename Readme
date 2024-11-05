@@ -1,0 +1,30 @@
+#HashTag App
+
+I have completed the assignment to the best of my understanding, covering all the key points.
+
+a A home page
+ -- with listing of the hashtags posts
+ -- each hashtag post then contain sub post
+ -- user can see the detail of each post
+
+
+b Detail Screen
+ -- listing of the complete post in a single hashtag
+
+c Post detail
+ -- complete detail of the post
+
+
+Pattern used
+
+a Constructor Dependency injection
+b SingleTon Pattern
+c Extension functions
+d Navigation Graph , LiveData , MVVM
+e Safe Args
+f Recycler Views
+g Internet checks
+h have checked 70 percent of ui worked in landscape mode as well
+i Swipe to Refresh on Home Screen
+
+please let me know if you need any changes or there is some confusion at my end in the implementation

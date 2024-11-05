@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swipeToRefresh"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_4sdp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/black"
+        tools:context=".ui.fragments.home.HomeFragment">
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/noInternetConnection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/check_your_internet_connection"
+            android:textAlignment="center"
+            android:visibility="gone"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/retryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/retry"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/noInternetConnection"
+            app:layout_constraintStart_toStartOf="@id/noInternetConnection"
+            app:layout_constraintEnd_toEndOf="@id/noInternetConnection"
+            android:layout_margin="@dimen/_10sdp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/postRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:itemCount="10"
+            android:visibility="visible"
+            app:layout_constraintVertical_bias="0.0"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            android:paddingHorizontal="@dimen/_5sdp"
+            tools:listitem="@layout/item_home_listing"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        <ProgressBar
+            android:id="@+id/dataProgressLoader"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            android:progressTint="@color/white"
+            android:visibility="gone"
+            app:layout_constraintVertical_bias="0.01"
+            android:secondaryProgressTint="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    android:paddingVertical="@dimen/_10sdp"
+    tools:context=".ui.fragments.home.HomeFragment">
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/topDivider"
+        android:layout_width="match_parent"
+        app:dividerColor="@android:color/darker_gray"
+        android:layout_height="1dp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:alpha="0.5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/_5sdp"/>
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/hashTagName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_hashtag"
+        android:letterSpacing="0.1"
+        android:paddingVertical="@dimen/_5sdp"
+        android:fontFamily="@font/bold"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12ssp"
+        android:maxWidth="@dimen/_200sdp"
+        app:layout_constraintTop_toBottomOf="@+id/topDivider"
+        app:layout_constraintStart_toStartOf="@+id/topDivider"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/seeAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/see_all"
+        android:fontFamily="@font/bold"
+        android:letterSpacing="0.1"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="@dimen/_12ssp"
+        android:maxWidth="@dimen/_100sdp"
+        app:layout_constraintTop_toBottomOf="@+id/topDivider"
+        app:layout_constraintEnd_toEndOf="@+id/topDivider"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/postAdapters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_2sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        tools:itemCount="10"
+        android:contentDescription="@string/all_order_item_listing_hashtag"
+        tools:listitem="@layout/item_hashtag"
+        app:layout_constraintTop_toBottomOf="@id/hashTagName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
